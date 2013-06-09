@@ -70,5 +70,17 @@
 </div></div>
 ({* }}} *})
 
+({* {{{ simpleBox *})
+<div class="dparts simpleBox"><div class="parts">
+<div class="partsHeading"><h3>上記のトピックと書き込みを削除する</h3></div>
+({t_form_block m=pc a=page_c_topic_delete_confirm})
+<input type="hidden" name="target_c_commu_topic_id" value="({$c_topic.c_commu_topic_id})" />
+<div class="block">
+<p><input type="submit" class="input_submit" value="　削　除　" /></p>
+</div>
+({/t_form_block})
+</div></div>
+({* }}} *})
+
 </div><!-- Center -->
 </div><!-- LayoutC -->

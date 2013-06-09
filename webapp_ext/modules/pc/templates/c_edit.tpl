@@ -69,5 +69,41 @@
 </div></div>
 ({* }}} *})
 
+({if $c_commu.c_member_id_sub_admin != $u && $c_commu.c_member_id_admin == $u})
+({if $is_topic})
+
+({* {{{ descriptionBox *})
+<div class="dparts descriptionBox"><div class="parts">
+<div class="partsHeading"><h3>({$WORD_COMMUNITY})を削除する</h3></div>
+<div class="block">
+<p>({$WORD_COMMUNITY})を削除するには、トピックをすべて削除する必要があります。<br />
+トピックがある場合は、それらを削除した後、このページに再度アクセスしてください。<br />
+(削除ボタンが表示されます)<br />
+<br />
+削除の際はトラブル等を避けるため、あらかじめ参加者へ削除を告知してください。</p>
+</div>
+</div></div>
+({* }}} *})
+
+({else})
+
+({* {{{ infoButtonBox *})
+<div class="dparts infoButtonBox"><div class="parts">
+<div class="partsHeading"><h3>({$WORD_COMMUNITY})を削除する</h3></div>
+<div class="block">
+<p>({$WORD_COMMUNITY})を削除します。削除の際はトラブル等を避けるため、あらかじめ参加者へ削除を告知してください。</p>
+({t_form_block m=pc a=page_c_edit_delete_c_commu_confirm})
+<input type="hidden" name="target_c_commu_id" value="({$c_commu.c_commu_id})" />
+<ul class="moreInfo button">
+<li><input type="submit" class="input_submit" value="　削　除　" /></li>
+</ul>
+({/t_form_block})
+</div>
+</div></div>
+({* }}} *})
+
+({/if})
+({/if})
+
 </div><!-- Center -->
 </div><!-- LayoutC -->
